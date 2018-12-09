@@ -1,0 +1,12 @@
+.services div {
+  width: 200px;
+  margin: 15px;
+  display: inline-block;
+  border: 5px double gray;
+  padding: 10px;
+}
+
+.services div img {
+  width: 100%;
+  height: 150px;
+}

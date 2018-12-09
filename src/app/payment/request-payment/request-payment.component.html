@@ -1,0 +1,43 @@
+<section class="request-payment">
+  <p>Создайте платежку, а индивидуальный предприниматель Швецова Мария Валерьевна подпишет её у себя в
+    интрернет-банке</p>
+  <br>
+  <form>
+    <input placeholder="ИНН или название получателя" required id="rq-inn">
+    <label for="rq-inn">ИНН получателя</label>
+    <br>
+    <input required id="rq-bik">
+    <label for="rq-bik">БИК</label>
+    <br>
+    <input required id="rq-num">
+    <label for="rq-num">Номер счета</label>
+    <br>
+    <input placeholder="Назначение платежа" id="rq-dest">
+    <label for="rq-dest">За что</label>
+    <br>
+    <section class="nds">
+      <input type="radio" id="nds18" name="nds">
+      <label for="nds18">НДС 18%</label>
+      <input type="radio" id="nds10" name="nds">
+      <label for="nds10">НДС 10%</label>
+      <input type="radio" id="none-nds" name="nds">
+      <label for="none-nds">Без НДС</label>
+    </section>
+    <br>
+    <input placeholder="Укажите сумму" required id="rq-sum">
+    <label for="rq-sum">Сколько</label>
+    <br>
+    <br>
+    <input placeholder="+7" required id="rq-tel">
+    <label for="rq-tel">Номер телефона</label>
+    <br>
+    <a id="personal-data" href="http://www.mary.com">Оставляя телефон, вы соглашаетесь на обработку
+      персональных данных</a>
+    <br>
+    <input placeholder="Для уведомлений об оплате" required id="rq-email">
+    <label for="rq-email">Эл.почта</label>
+    <br>
+    <button type="submit">Создать платеж</button>
+    <button type="reset">Очистить форму</button>
+  </form>
+</section>

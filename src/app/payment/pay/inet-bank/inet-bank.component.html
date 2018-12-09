@@ -1,0 +1,29 @@
+<section class="inet-bank">
+  <p>Сформируйте платежку и загрузите её в свой банк для подписи</p>
+  <form>
+    <label for="inn">От кого</label>
+    <input placeholder="ИНН или название плательщика" required id="inn">
+    <br>
+    <label for="bik">БИК</label>
+    <input required id="bik">
+    <br>
+    <label for="num">Номер счета</label>
+    <input required id="num">
+    <br>
+    <label for="dest">За что</label>
+    <input placeholder="Назначение платежа" id="dest">
+    <br>
+    <section class="nds">
+      <label><input type="radio" name="nds">НДС 18%</label>
+      <label><input type="radio" name="nds">НДС 10%</label>
+      <label><input type="radio" name="nds">Без НДС%</label>
+    </section>
+    <br>
+    <label for="ibsum">Сколько</label>
+    <input placeholder="Укажите сумму" required id="ibsum">
+    <br>
+    <br>
+    <button type="submit">Получить файл для интернет-банка</button>
+    <button type="reset">Очистить форму</button>
+  </form>
+</section>

@@ -1,0 +1,17 @@
+<section class="any-bank">
+  <form>
+    <section class="card-requisites">
+      <input placeholder="Номер карты" required id="card-number">
+      <input placeholder="ММ/ГГ" required id="date">
+      <input placeholder="CVC" required id="cvc">
+    </section>
+    <label for="sum">Сумма</label>
+    <input placeholder="от 1000 до 75000&#x20bd;" required id="sum">
+    <label for="com">Комментарий</label>
+    <input placeholder="До 150 символов" id="com">
+    <label for="email">Ваша эл.почта</label>
+    <input placeholder="Для квитанций об оплате" type="email" required id="email" (change)="form.ValidateEmail()"
+           name="email">
+    <button type="submit">Заплатить</button>
+  </form>
+</section>

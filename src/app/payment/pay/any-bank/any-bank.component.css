@@ -1,0 +1,156 @@
+
+#pay:checked ~ section:not(.pay),
+#request-payment:checked ~ section:not(.request-payment),
+#any-bank:checked ~ section:not(.any-bank),
+#inet-bank:checked ~ section:not(.inet-bank) {
+  display: none;
+}
+
+.user-info img.logo {
+  width: 200px;
+  float: right;
+}
+
+main hr:first-of-type {
+  clear: both;
+}
+
+.services div {
+  width: 300px;
+  margin: 15px;
+  display: inline-block;
+  border: 5px double gray;
+  padding: 10px;
+}
+
+.services div img {
+  width: 100%;
+  height: 200px;
+}
+
+input:not([type='radio']) {
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.request-payment label,
+.inet-bank label {
+  float: left;
+}
+
+.nds {
+  float: right;
+  margin-right: 700px;
+}
+
+.nds > label {
+  margin-left: 10px;
+}
+
+.request-payment input,
+.inet-bank input {
+  float: right;
+  margin-right: 700px;
+  width: 200px;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+label[for=pay],
+label[for=request-payment],
+label[for=any-bank],
+label[for=inet-bank] {
+
+  border: 2px solid lightgray;
+  padding: 3px;
+}
+
+label[for=pay]:hover,
+label[for=request-payment]:hover,
+label[for=any-bank]:hover,
+label[for=inet-bank]:hover {
+  background-color: lightgray;
+
+}
+
+#pay:checked ~ label[for=pay],
+#request-payment:checked ~ label[for=request-payment],
+#any-bank:checked ~ label[for=any-bank],
+#inet-bank:checked ~ label[for=inet-bank] {
+  background-color: darkgrey;
+
+}
+
+
+section.pay,
+section.any-bank,
+section.inet-bank {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+header {
+  font-family: Garamond, serif;
+  box-shadow: 10px 30px 50px powderblue;
+}
+
+.user-info {
+  padding: 3px;
+  margin: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: green;
+}
+
+.user-info > * {
+  margin: 10px;
+  padding: 1px;
+}
+
+.client-contacts > * {
+  margin-right: 10px;
+}
+
+.any-bank form {
+  display: grid;
+  grid-template-columns: 1fr 250px 2fr;
+  grid-template-rows: 4fr 4fr 4fr 4fr;
+  grid-gap: 50px;
+}
+
+.card-requisites {
+  background-color: #fdfdfd;
+  border-radius: 15px;
+  grid-row: span 4;
+  display: grid;
+  grid-template: 'image image' 1fr 'card-number card-number' 1fr 'date cvc' 1fr
+            / auto auto;
+  grid-gap: 20px;
+  padding: 25px;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, .3);
+}
+
+.card-requisites #card-number,
+.card-requisites #date,
+.card-requisites #cvc {
+  background-color: #fdfdfd;
+}
+
+.card-requisites #card-number {
+  grid-area: card-number;
+
+}
+
+.card-requisites #date {
+  grid-area: date;
+}
+
+.card-requisites #cvc {
+  grid-area: cvc;
+}
+
+
