@@ -1,26 +1,26 @@
 <section class="inet-bank">
   <p>Сформируйте платежку и загрузите её в свой банк для подписи</p>
-  <form>
+  <form #form='ngForm' (ngSubmit)="submit(form)">
     <label for="inn">От кого</label>
-    <input placeholder="ИНН или название плательщика" required id="inn">
+    <input placeholder="ИНН или название плательщика" required id="inn" name="inn" [(ngModel)]="inn">
     <br>
     <label for="bik">БИК</label>
-    <input required id="bik">
+    <input required id="bik" name="bik" [(ngModel)]="bik">
     <br>
-    <label for="num">Номер счета</label>
-    <input required id="num">
+    <label for="num">Номер счета </label>
+    <input required id="num" name="num" [(ngModel)]="num">
     <br>
     <label for="dest">За что</label>
-    <input placeholder="Назначение платежа" id="dest">
+    <input placeholder="Назначение платежа" id="dest" name="dest" [(ngModel)]="dest">
     <br>
     <section class="nds">
-      <label><input type="radio" name="nds">НДС 18%</label>
-      <label><input type="radio" name="nds">НДС 10%</label>
-      <label><input type="radio" name="nds">Без НДС%</label>
+      <label><input type="radio" name="nds" value="18" [(ngModel)]="nds18">НДС 18%</label>
+      <label><input type="radio" name="nds" value="10" [(ngModel)]="nds10">НДС 10%</label>
+      <label><input type="radio" name="nds" value="0" [(ngModel)]="nonds">Без НДС</label>
     </section>
     <br>
     <label for="ibsum">Сколько</label>
-    <input placeholder="Укажите сумму" required id="ibsum">
+    <input placeholder="Укажите сумму" required id="ibsum" name="sum" [(ngModel)]="sum">
     <br>
     <br>
     <button type="submit">Получить файл для интернет-банка</button>

@@ -1,17 +1,16 @@
 <section class="any-bank">
-  <form>
+  <form #form='ngForm' (ngSubmit)="submit(form)">
     <section class="card-requisites">
-      <input placeholder="Номер карты" required id="card-number">
-      <input placeholder="ММ/ГГ" required id="date">
-      <input placeholder="CVC" required id="cvc">
+      <input placeholder="Номер карты" required id="card-number" name="card_number" [(ngModel)]="card_number">
+      <input placeholder="ММ/ГГ" required id="date" name="date" [(ngModel)]="date">
+      <input placeholder="CVC" required id="cvc" name="cvc" [(ngModel)]="cvc">
     </section>
     <label for="sum">Сумма</label>
-    <input placeholder="от 1000 до 75000&#x20bd;" required id="sum">
+    <input placeholder="от 1000 до 75000&#x20bd;" required id="sum" name="amount" [(ngModel)]="amount">
     <label for="com">Комментарий</label>
-    <input placeholder="До 150 символов" id="com">
+    <input placeholder="До 150 символов" id="com" name="com">
     <label for="email">Ваша эл.почта</label>
-    <input placeholder="Для квитанций об оплате" type="email" required id="email" (change)="form.ValidateEmail()"
-           name="email">
+    <input placeholder="Для квитанций об оплате" type="email" required id="email" name="email" [(ngModel)]="email">
     <button type="submit">Заплатить</button>
   </form>
 </section>

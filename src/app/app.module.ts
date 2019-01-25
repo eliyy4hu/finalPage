@@ -9,9 +9,14 @@ import {RequestPaymentComponent} from './payment/request-payment/request-payment
 import {AnyBankComponent} from './payment/pay/any-bank/any-bank.component';
 import {InetBankComponent} from './payment/pay/inet-bank/inet-bank.component';
 import {Routes, RouterModule} from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
+import {FooterComponent} from './footer/footer.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MyServerComponent} from './my-server/my-server.component';
+import {FormsModule} from '@angular/forms';
+import { AdminComponentComponent } from './admin-component/admin-component.component';
 
 const appRoutes: Routes = [
+  {path:'admin',component: AdminComponentComponent},
   {path: 'pay', redirectTo: 'pay/anybank'},
   {
     path: 'pay',
@@ -33,10 +38,12 @@ const appRoutes: Routes = [
     RequestPaymentComponent,
     AnyBankComponent,
     InetBankComponent,
-    FooterComponent
+    FooterComponent,
+    MyServerComponent,
+    AdminComponentComponent,
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes)
+    BrowserModule, RouterModule.forRoot(appRoutes), HttpClientModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
